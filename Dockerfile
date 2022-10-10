@@ -20,6 +20,7 @@ COPY server.cfg /quakejs/base/cpma/server.cfg
 # WORKDIR /var/www/html
 # RUN bash /var/www/html/get_assets.sh
 COPY ./include/ioq3ded/ioq3ded.fixed.js /quakejs/build/ioq3ded.js
+COPY ./include/ioq3ded/ioquake3.fixed.js /quakejs/build/ioquake3.js
 
 RUN rm /var/www/html/index.html && cp /quakejs/html/* /var/www/html/
 COPY ./include/assets/ /var/www/html/assets
